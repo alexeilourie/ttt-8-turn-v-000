@@ -19,8 +19,12 @@ def display_board(board)
 end
 
 def valid_move?(board, index)
-  if index >= 0 && index < 9 && !(board[index] == "X" || board[index] == "O")
-    return true
+  if index >= 0 && index < 9 && 
+    if board[index] == "X" || board[index] == "O"
+      return false
+    else
+      return true
+    end
   else
     return false
   end
