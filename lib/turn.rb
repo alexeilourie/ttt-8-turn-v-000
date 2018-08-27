@@ -1,7 +1,12 @@
 def turn(board)
   puts "Please enter 1-9:"
   index = gets
-  puts index
+  index -= 1
+  if valid_move?(board, index)
+    move(board, index, token)
+  else
+    puts "Invalid input. Please enter 1-9"
+  end
 end
 
 def display_board(board)
