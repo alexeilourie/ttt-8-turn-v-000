@@ -4,7 +4,7 @@ def turn(board)
   index -= 1
   puts index
   if valid_move?(board, index)
-    move(board, index, token)
+    move(board, index)
   else
     puts "Invalid input. Please enter 1-9"
   end
